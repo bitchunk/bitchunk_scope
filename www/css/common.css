@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+body{
+	background-color:#082010;
+	font-size:16px;
+	border-style: none; border-width: 1px;
+	text-shadow:0px 0px 1px #ddeeff;
+	background-image:url(/images/common/crysta_top_h.png);
+	color:hsl(180, 50%, 80%);
+/*	min-height:480px;*/
+}
+h1{
+	font-size:12px;
+}
+
+.mainbox{
+	width:640px;
+	background: hsla(220, 50%, 10%, 0.6);
+	padding: 16px;
+	border-radius:16px;
+	border: 8px dotted hsla(220, 60%, 90%, 0.8);
+	
+}
+
+footer{
+	position:absolute;
+	text-align:right;
+	right: 16px;
+	bottom: 0px;
+}
+
+a{
+	font-size:20px;
+	text-shadow:none;
+	color: hsl(80, 90%, 60%);
+	font-weight: bold;
+	text-decoration:underline;
+}
+a:hover{
+	color: hsl(80, 90%, 80%);
+	text-decoration:none;
+}
+
+
+.sublink a{
+	font-size:14px;
+}

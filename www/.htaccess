@@ -1,0 +1,13 @@
+IndexIgnore *
+Options -Indexes +FollowSymLinks
+AddHandler cgi-script htaccess 
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/css.*$
+RewriteCond %{REQUEST_URI} !^/images.*$
+RewriteCond %{REQUEST_URI} !^/pictures.*$
+RewriteCond %{REQUEST_URI} !^/music.*$
+RewriteRule ^/* DispatchController.php
+
+#RewriteCond %{HTTP_HOST} ^bitchunk.fam.cx$ [NC]
