@@ -3,11 +3,18 @@ Options -Indexes +FollowSymLinks
 AddHandler cgi-script htaccess 
 
 RewriteEngine On
+RewriteBase /
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/MP3Dumper.php$
+RewriteCond %{REQUEST_URI} ^/music.*$
+RewriteRule ^(.*)$ MP3Dumper.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/css.*$
 RewriteCond %{REQUEST_URI} !^/images.*$
 RewriteCond %{REQUEST_URI} !^/pictures.*$
 RewriteCond %{REQUEST_URI} !^/music.*$
-RewriteRule ^/* DispatchController.php
+RewriteCond %{REQUEST_URI} !^/DispatchController.php$
+RewriteRule ^(.*)$ DispatchController.php [L]
 
-#RewriteCond %{HTTP_HOST} ^bitchunk.fam.cx$ [NC]

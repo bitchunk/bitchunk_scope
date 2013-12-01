@@ -41,6 +41,14 @@ a:hover{
 }
 
 
+audio{
+	vertical-align: middle;
+}
+
+span{
+	vertical-align: middle;
+}
+
 .sublink a{
 	font-size:14px;
 }
