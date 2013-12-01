@@ -6,6 +6,7 @@ define("PICT_PATH", SYSDIR. '/pictures/');
 // define("MUSIC_PATH", SYSDIR. '/music/');
 define("MUSIC_PATH", ROOTDIR. '/music/');
 define("SOUNDS_PATH", SYSDIR. '/sounds/');
+define('APP_PATH', SYSDIR. '/app/');
 
 define("MODEL_PATH", SYSDIR. "models/");
 define("CONTROLLER_PATH", SYSDIR. "controllers/");

@@ -1,0 +1,3 @@
+<?
+	DispatchController::$cardsmeta = 'litrokeyboard';
+?>

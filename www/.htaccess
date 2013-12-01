@@ -15,6 +15,8 @@ RewriteCond %{REQUEST_URI} !^/css.*$
 RewriteCond %{REQUEST_URI} !^/images.*$
 RewriteCond %{REQUEST_URI} !^/pictures.*$
 RewriteCond %{REQUEST_URI} !^/music.*$
+RewriteCond %{REQUEST_URI} !^/app.*$
+RewriteCond %{REQUEST_URI} !^/app/.*/.*$
 RewriteCond %{REQUEST_URI} !^/DispatchController.php$
 RewriteRule ^(.*)$ DispatchController.php [L]
 
