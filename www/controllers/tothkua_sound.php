@@ -5,7 +5,9 @@
 	$files = glob(MUSIC_PATH. 'tothkua/*'. $mime);
 	$titles = array(
 		'stage_a' => 'ノボリアガルモノガタリ（STAGE1～5）',
-		'option' => 'ジュンビチュウ！！(OPTION MODE)'
+		'option' => 'ジュンビチュウ！！(OPTION MODE)',
+		'stage_b' => 'チカトシ（STAGE6～9）',
+		'boss' => 'ゲートキーパー(STAGE10 BOSS)',
 	);
 	foreach($titles as $file=>$title){
 		$path = MUSIC_PATH. 'tothkua/'. $file. $mime;

@@ -43,7 +43,9 @@ class DispatchController {
 			// default :
 				// self::pageView($name);
 		// }
-		self::pageView($name);
+		
+		$info = parse_url($name);
+		self::pageView($info['path']);
 		exit ;
 	}
 
@@ -59,7 +61,7 @@ class DispatchController {
 		if (!file_exists(APP_PATH. $name)) {
 			self::pageView('index');
 		}
-		require_once (APP_PATH. $name. '/index.html');
+		require_once (APP_PATH. $name. '/index.php');
 	}
 
 	static function pageView($name) {
@@ -67,31 +69,14 @@ class DispatchController {
 			$name = 'index';
 		}
 		require_once (CONTROLLER_PATH . $name . '.php');
-		require_once (VIEW_PATH . 'common/header.html');
+		require_once (VIEW_PATH . 'common/header.php');
 		if ($name != 'index') {
-			require_once (VIEW_PATH . 'common/navigator.html');
+			require_once (VIEW_PATH . 'common/navigator.php');
 		}
-		require_once (VIEW_PATH . $name . '.html');
-		require_once (VIEW_PATH . 'common/footer.html');
+		require_once (VIEW_PATH . $name . '.php');
+		require_once (VIEW_PATH . 'common/footer.php');
 	}
 
-	static function outputMusic($uri) {
-		$path = MUSIC_PATH . str_replace(self::$DIRNAME . '/', "", $uri);
-		//-music
-		if (!file_exists($path)) {
-			self::notfound();
-			exit ;
-		}
-		// header("Pragma: public");
-		// header("Expires: 0");
-		// header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-		// header("Cache-Control: public");
-		// header("Content-Description: File Transfer");
-		header("Content-Type: " . self::$CONTENT_TYPE);
-		echo $path;
-		exit ;
-
-	}
 
 };
 DispatchController::dispatch();

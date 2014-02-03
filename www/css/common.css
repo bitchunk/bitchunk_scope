@@ -17,6 +17,8 @@ h1{
 	padding: 16px;
 	border-radius:16px;
 	border: 8px dotted hsla(220, 60%, 90%, 0.8);
+	margin:30px auto;
+	text-align: center;
 	
 }
 #contentsBody{
@@ -41,8 +43,9 @@ a:hover{
 	color: hsl(80, 90%, 80%);
 	text-decoration:none;
 }
-
-
+.soundBox{
+	text-align: right;
+}
 audio{
 	vertical-align: middle;
 }

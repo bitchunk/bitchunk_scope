@@ -2,6 +2,11 @@ IndexIgnore *
 Options -Indexes +FollowSymLinks
 AddHandler cgi-script htaccess 
 
+<Files ~ "\.(html|php|js|png|css)$">
+Header add Pragma "no-cache"
+Header set Cache-Control no-cache
+</Files>
+
 RewriteEngine On
 RewriteBase /
 
@@ -11,12 +16,22 @@ RewriteCond %{REQUEST_URI} ^/music.*$
 RewriteRule ^(.*)$ MP3Dumper.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/ImageDumper.php$
+RewriteCond %{REQUEST_URI} ^/pictures.*$
+RewriteRule ^(.*)$ ImageDumper.php [L]
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/css.*$
 RewriteCond %{REQUEST_URI} !^/images.*$
+RewriteCond %{REQUEST_URI} !^/jslib.*$
 RewriteCond %{REQUEST_URI} !^/pictures.*$
 RewriteCond %{REQUEST_URI} !^/music.*$
 RewriteCond %{REQUEST_URI} !^/app.*$
 RewriteCond %{REQUEST_URI} !^/app/.*/.*$
 RewriteCond %{REQUEST_URI} !^/DispatchController.php$
 RewriteRule ^(.*)$ DispatchController.php [L]
+
+
 

@@ -26,18 +26,24 @@ function focusIFrame()
 			<p style="text-align:center;">操作</p>
 			<p>Tabキー：モード切り替え（TUNE⇔NOTE）</p>
 			<p>【TUNEモード】</p>
-			<p>カーソルキー：チャンネルパラメータのカーソル移動</p>
-			<p>＜ or ＞ キー：TUNEパラメータの調整</p>
+			<p>カーソルキー：TUNEパラメータの調整</p>
+			<p>＜ or ＞ キー：TUNEパラメータのセット</p>
 			<p>【NOTEモード】</p>
 			<p>カーソルキー：NOTEカーソルの移動</p>
-			<p>＞：メニューの決定／＜：メニューのキャンセル</p>
+			<p>＞：メニューの決定　／　＜：メニューのキャンセル</p>
+			<p>【CATCHモード】</p>
+			<p>カーソル←・→キー：NOTEカーソルを次のNOTEをキャッチ</p>
+			<p>カーソル↑・↓キー：キャッチの対象を変更</p>
+			<p>＞：キャッチを保持　／　＜：キャッチを解放・【NOTEモード】に戻る</p>
 			<p>【共通】</p>
 			<p>スペースキー：PLAY・STOP</p>
-			<p>－ or ＾ キー：オクターブの調整</p>
+			<p>－ or ＾(+) キー：オクターブの調整</p>
+			<p>[ or ] キー：STEPの調整（デフォルト100ms）</p>
 			<p>そのほか：鍵盤</p>
 			<p style="text-align:center;">パラメータ（今とりあえず機能しているもの）</p>
 			<p>ＶＯＬＵＭ：音量</p>
 			<p>ＴＹＰＥ：波形タイプ／０～３：矩形波／４～７：三角波／８～１１：鋸波／１２～１５：ノイズ</p>
 		</div>
+		<p style="text-align: right;"><a href="https://plus.google.com/105818193762791602670" rel="publisher">Google+</a></p>
 	</div>
 </div>

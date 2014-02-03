@@ -2,7 +2,7 @@
 define("ROOTDIR", dirname(dirname(dirname(__FILE__))));//from properties
 define("SYSDIR", ROOTDIR. '/www/');//from properties
 define("IMAGE_PATH", SYSDIR. '/images/');
-define("PICT_PATH", SYSDIR. '/pictures/');
+define("PICT_PATH", ROOTDIR. '/pictures/');
 // define("MUSIC_PATH", SYSDIR. '/music/');
 define("MUSIC_PATH", ROOTDIR. '/music/');
 define("SOUNDS_PATH", SYSDIR. '/sounds/');

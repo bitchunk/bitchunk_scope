@@ -16,9 +16,9 @@
 
 <?php
  if(!empty(DispatchController::$cardsmeta)){
-	require_once(VIEW_PATH . 'cardsmeta/'. DispatchController::$cardsmeta. '.html');
+	require_once(VIEW_PATH . 'cardsmeta/'. DispatchController::$cardsmeta. '.php');
 }else{
-	require_once(VIEW_PATH . 'cardsmeta/'. DispatchController::$DEFAULT_CARDSMETA. '.html');
+	require_once(VIEW_PATH . 'cardsmeta/'. DispatchController::$DEFAULT_CARDSMETA. '.php');
 }
 ?>
 
@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="css/common.css" />
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="/jslib/jquery-2.0.0.min.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
