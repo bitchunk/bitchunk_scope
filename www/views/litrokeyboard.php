@@ -35,6 +35,8 @@ function focusIFrame()
 			<p>カーソル←・→キー：NOTEカーソルを次のNOTEをキャッチ</p>
 			<p>カーソル↑・↓キー：キャッチの対象を変更</p>
 			<p>＞：キャッチを保持　／　＜：キャッチを解放・【NOTEモード】に戻る</p>
+			<p>【FILEモード】</p>
+			<p>現在COOKIEのみの保存になります。<span style="color:hsl(0, 70%, 70%); font-size:12px;">※容量4kbyte以上は動作保証しかねます。</span></p>
 			<p>【共通】</p>
 			<p>スペースキー：PLAY・STOP</p>
 			<p>－ or ＾(+) キー：オクターブの調整</p>
