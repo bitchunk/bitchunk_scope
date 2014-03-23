@@ -2,8 +2,7 @@
 
 window.onload=function(){
 	focusIFrame();
-	document.body.addEventListener('mouseup', focusIFrame, true);
-	document.body.addEventListener('mousedown', focusIFrame, true);
+	document.getElementsByClassName('focus')[0].addEventListener('click', focusIFrame, true);
 };
 function focusIFrame()
 {
@@ -19,7 +18,7 @@ function focusIFrame()
 	<div align="center" style="padding-top:30px;">
 		<div class="mainbox">
 			<p>以前windows用に作ったPSGちっくな音が出るキーボードのブラウザ版が出来上がる予定です。(※音量注意)</p>
-			<p>(ならなくなったら外側をゆっくりクリックしてみてください)</p>
+			<p>(ならなくなったら<span class="focus" style="font-weight:bold; vertical-align:top; cursor:pointer; background: hsl(10, 50%, 20%);">ここ</span>クリックしてみてください)</p>
 			<div>
 				<iframe src="/app/litrosound" scrolling="no" width="640" height="480"></iframe>
 			</div>

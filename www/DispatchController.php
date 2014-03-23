@@ -4,6 +4,8 @@ require_once ('./properties/common.php');
 class DispatchController {
 	static $DEFAULT_CARDSMETA = 'common';
 	static $cardsmeta = null;
+	static $additionalScripts = array();
+	static $donateButton = '';
 	
 	static function dispatch() {
 		$uri = $_SERVER['REQUEST_URI'];
@@ -76,6 +78,17 @@ class DispatchController {
 		require_once (VIEW_PATH . $name . '.php');
 		require_once (VIEW_PATH . 'common/footer.php');
 	}
+	
+	static function appendJS($filename)
+	{
+		if(!is_array($filename)){
+			$filename = array($filename);
+		}
+		foreach($filename as $file){
+			self::$additionalScripts[] = $file;
+		}
+	}
+	
 
 
 };

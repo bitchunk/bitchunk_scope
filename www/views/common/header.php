@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="css/common.css" />
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<script src="/jslib/jquery-2.0.0.min.js"></script>
+<script src="/js/lib/jquery-2.0.0.min.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -44,6 +44,12 @@
   })();
 
 </script>
+<?php
+foreach(DispatchController::$additionalScripts as $index=>$filename){
+	echo '<script src="/js/'. $filename. '"></script>';
+}
+
+?>
 </head>
 <body>
 <header>

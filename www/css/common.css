@@ -11,6 +11,16 @@ h1{
 	font-size:12px;
 }
 
+.donate{
+	float:right;
+}
+.clear{
+	font-size:0;
+	line-height:0;
+	visibility: hidden;
+	display:block;
+}
+
 .mainbox{
 	width:640px;
 	background: hsla(220, 50%, 10%, 0.6);
@@ -56,4 +66,20 @@ span{
 
 .sublink a{
 	font-size:14px;
+}
+
+.introduction{
+	background:hsl(140, 90%, 90%);
+	padding: 10px;
+	margin: 40px;
+	border-radius: 80px;
+}
+
+.introduction p{
+	color: hsl(140, 30%, 50%);
+	font-weight: bold;
+}
+
+.introduction img{
+	border:  4px solid hsl(140, 30%, 60%);
 }

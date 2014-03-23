@@ -40,21 +40,13 @@ class MP3Dumper {
 			self::notfound();
 			exit ;
 		}
-		// header("Pragma: public");
-		// header("Expires: 0");
-		// header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-		// header("Cache-Control: public");
-		// header("Content-Description: File Transfer");
-		header("Content-Type: " . self::$CONTENT_TYPE);
-		header('Content-length: ' . filesize($path));
-		header('Cache-Control: no-cache');
-		header('Content-Disposition: filename="' . $path . '"');
 
-		header('Content-type: {$mime_type}');
+		header("Content-Type: " . self::$CONTENT_TYPE);
+		header('Accept-Ranges: bytes');
 		header('Content-length: ' . filesize($path));
 		header('Content-Disposition: filename="' . basename($path));
-		header('X-Pad: avoid browser bug');
-		header('Cache-Control: no-cache');
+		header('Cache-Control: max-age=0');
+		// header('X-Pad: avoid browser bug');
 		readfile($path);
 		exit ;
 
