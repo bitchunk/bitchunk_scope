@@ -1,4 +1,4 @@
-<?
+<?php
 	
 	$contents = array();
 	$mime = '.mp3';

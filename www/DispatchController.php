@@ -1,6 +1,7 @@
 <?php
 chdir(dirname(__FILE__));
-require_once ('./properties/common.php');
+require_once('./properties/common.php');
+//ま
 class DispatchController {
 	static $DEFAULT_CARDSMETA = 'common';
 	static $cardsmeta = null;

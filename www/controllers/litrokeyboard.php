@@ -1,4 +1,4 @@
-<?
+<?php
 	self::$cardsmeta = 'litrokeyboard';
 	function setButton()
 	{

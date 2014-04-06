@@ -1,4 +1,4 @@
-<?
+<?php
 define("ROOTDIR", dirname(dirname(dirname(__FILE__))));//from properties
 define("SYSDIR", ROOTDIR. '/www/');//from properties
 define("IMAGE_PATH", SYSDIR. '/images/');
