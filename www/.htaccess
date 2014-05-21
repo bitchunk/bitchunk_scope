@@ -23,6 +23,8 @@ RewriteRule ^(.*)$ ImageDumper.php [L]
 
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/robots.txt$
+RewriteCond %{REQUEST_URI} !^/sitemap.xml$
 RewriteCond %{REQUEST_URI} !^/info.php$
 RewriteCond %{REQUEST_URI} !^/css.*$
 RewriteCond %{REQUEST_URI} !^/images.*$

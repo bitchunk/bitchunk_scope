@@ -1,5 +1,6 @@
 <?php
 	self::$cardsmeta = 'litrokeyboard';
+	self::$headerBase = 'litrokeyboard';
 	function setButton()
 	{
 		return 

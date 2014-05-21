@@ -7,6 +7,7 @@ class DispatchController {
 	static $cardsmeta = null;
 	static $additionalScripts = array();
 	static $donateButton = '';
+	static $headerBase = 'common';
 	
 	static function dispatch() {
 		$uri = $_SERVER['REQUEST_URI'];
@@ -29,7 +30,8 @@ class DispatchController {
 			
 		}
 		
-		if (count($separate) > 2) {echo $uri;
+		$seplen = count($separate);
+		if($seplen - intval(empty($separate[$seplen - 1])) > 2) {
 			self::notfound();
 			exit ;
 		}

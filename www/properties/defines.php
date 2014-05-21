@@ -38,4 +38,7 @@ if(strstr($svh, HOST_PRODUCTION) != false){
 }
 
 
+define("SITE_NAME", "bitchunk");
+define("SITE_AUTHER", "しふたろう");
+
 ?>

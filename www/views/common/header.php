@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title><?php echo "bitchunk | ケモノ系創作サイト"; ?></title>
-
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-
-<meta name="description" content="個人創作サイト。オリジナルのケモノキャラクターを中心とする絵、ゲーム、Web開発等総合創作物が置いてあります">
-<meta name="keywords" content="ケモノ,いたち,イタチ,鼬" />
-<meta name="ROBOTS" content="NOINDEX,NOFOLLOW" />
+<?php
+	require_once(VIEW_PATH . 'headerbase/'. DispatchController::$headerBase. '.php');
+?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="author" content="しふたろう">
 
@@ -25,7 +22,7 @@
 <!-- <meta name="viewport" content="width=device-width; initial-scale=1.0"> -->
 
 <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="/css/common.css" />
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script src="/js/lib/jquery-2.0.0.min.js"></script>
