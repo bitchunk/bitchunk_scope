@@ -1,6 +1,10 @@
 <?php
 	self::$cardsmeta = 'litrokeyboard';
 	self::$headerBase = 'litrokeyboard';
+	self::appendBreadCrumb('LitroKeyboard', '/litrokeyboard');
+	
+	$paramstr = @http_build_query($_GET, '', '&');
+	
 	function setButton()
 	{
 		return 

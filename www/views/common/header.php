@@ -26,6 +26,7 @@
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script src="/js/lib/jquery-2.0.0.min.js"></script>
+<script src="/js/lib/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

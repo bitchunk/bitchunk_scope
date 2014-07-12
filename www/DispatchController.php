@@ -8,13 +8,18 @@ class DispatchController {
 	static $additionalScripts = array();
 	static $donateButton = '';
 	static $headerBase = 'common';
+	static $breadcrumb = array(array('name' => 'Top', 'link' => '/'));
 	
 	static function dispatch() {
 		$uri = $_SERVER['REQUEST_URI'];
 		$get = $_GET;
-		if (!empty($uri)) {
+		$match = array();
+		
+		preg_match('/\/([^\s\/]*)\/?([^\s\/\?]*)?/', $uri, $match);
+		
+		if (!empty($match[0])) {
 			$separate = explode('/', $uri);
-			$name = $separate[1];
+			$name = $match[1];
 			// 0: '/'
 		} else {
 			$name = 'index';
@@ -30,11 +35,13 @@ class DispatchController {
 			
 		}
 		
-		$seplen = count($separate);
-		if($seplen - intval(empty($separate[$seplen - 1])) > 2) {
-			self::notfound();
-			exit ;
-		}
+//		var_dump($uri, $match);
+		
+		// $seplen = count($separate);
+		// if($seplen - intval(empty($separate[$seplen - 1])) > 2) {
+			// self::notfound();
+			// exit ;
+		// }
 		
 		// switch($name) {
 			// case 'css' :
@@ -90,6 +97,25 @@ class DispatchController {
 		foreach($filename as $file){
 			self::$additionalScripts[] = $file;
 		}
+	}
+	
+	static function appendBreadCrumb($str, $link){
+		array_push(self::$breadcrumb, array('name' => $str, 'link' => $link));
+	}
+	
+	static function outputBreadCrumb(){
+		$str = "";
+		foreach(self::$breadcrumb as $index=>$row){
+			if($index > 0){
+				$str .= '&nbsp;➡&nbsp;';
+			}
+			if($index == count(self::$breadcrumb) - 1){
+				$str .= '<span class="breadcrumb">'. $row['name']. '</span>';
+			}else{
+				$str .= '<a href="'. $row['link']. '" ><span class="breadcrumb">'. $row['name']. '</span></a>';
+			}
+		}
+		return $str;
 	}
 	
 

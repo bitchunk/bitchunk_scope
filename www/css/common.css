@@ -2,6 +2,7 @@
 body{
 	background-color:#082010;
 	font-size:16px;
+	line-height:20px;
 	border-style: none; border-width: 1px;
 	text-shadow:0px 0px 1px #ddeeff;
 	background-image:url(/images/common/crysta_top_h.png);
@@ -17,6 +18,11 @@ nav{
 	margin:0;
 	padding:8px;
 }
+li{
+	text-decoration: none;
+	list-style: none;
+}
+
 h1{
 	font-size:12px;
 }
@@ -44,7 +50,7 @@ h1{
 }
 #contentsBody{
 	min-height:480px;
-	margin:8px;
+	margin: 8px auto;
 
 }
 
@@ -95,6 +101,17 @@ span{
 	border-radius: 80px;
 }
 
+nav{
+	background:hsla(220, 50%, 10%, 0.6);
+	background-size:8px;
+	background-position: center;
+}
+.breadcrumb{
+	font-size:12px;
+	padding:8px 16px;
+	border-radius:16px;
+	background:hsla(260, 50%, 30%, 0.6);
+}
 footer span{
 	vertical-align:bottom;
 	font-size:14px;
@@ -108,6 +125,23 @@ footer span.auther{
 footer span.copyright{
 }
 
+.block_left{
+	float:left;
+}
+.text_left{
+	text-align:left;
+}
+.text_right{
+	text-align:right;
+}
+
+.plastic_blue{
+	background:hsla(220, 50%, 10%, 0.6);
+}
+.plastic_lightGreen{
+	background:hsla(140, 50%, 30%, 0.6);
+}
+
 .introduction p{
 	color: hsl(140, 30%, 50%);
 	font-weight: bold;
@@ -115,4 +149,29 @@ footer span.copyright{
 
 .introduction img{
 	border:  4px solid hsl(140, 30%, 60%);
+}
+.bold{
+	font-weight: bold;
+}
+
+.ok:before{
+	content: "★";
+	margin-right:8px;
+}
+.nogood:before{
+	content: "☁";
+	margin-right:8px;
+}
+.sorry:before{
+	content: "☃";
+	margin-right:8px;
+}
+
+.font_litroGreen{
+	color:hsl(120, 80%, 60%);
+	vertical-align: bottom;
+}
+.font_red{
+	color:hsl(30, 90%, 80%);
+	vertical-align: bottom;
 }
