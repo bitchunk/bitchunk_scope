@@ -28,4 +28,3 @@
 			';
 	}
 	// self::$donateButton = setButton();
-?>

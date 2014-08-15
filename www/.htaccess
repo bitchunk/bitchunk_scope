@@ -15,10 +15,14 @@ RewriteCond %{REQUEST_URI} !^/MP3Dumper.php$
 RewriteCond %{REQUEST_URI} ^/music.*$
 RewriteRule ^(.*)$ MP3Dumper.php [L]
 
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_URI} !^/ImageDumper.php$
+#RewriteCond %{REQUEST_URI} ^/pictures.*$
+#RewriteRule ^(.*)$ ImageDumper.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !^/ImageDumper.php$
+RewriteCond %{REQUEST_URI} !^/DispatchImage.php$
 RewriteCond %{REQUEST_URI} ^/pictures.*$
-RewriteRule ^(.*)$ ImageDumper.php [L]
+RewriteRule ^(.*)$ DispatchImage.php [L]
 
 
 

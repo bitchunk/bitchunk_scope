@@ -66,10 +66,7 @@ $(function(){
 		</div>
 		<!-- <p>(キーの反応がなくなったら<span class="focus" style="font-weight:bold; vertical-align:top; cursor:pointer; background: hsl(10, 50%, 20%);">ここ</span>クリックしてみてください)</p> -->
 		<div class="sublink plastic_blue" style="margin-top: 16px; padding:8px; 16px;">
-			<p class="small" style="margin:8px; font-size:14px; text-align:left;">デモ用に曲を打ち込んでみました。(耳コピ)</p>
-			<?php if(@$_GET['sound_id'] !== '63645') { ?><p><a class="litro_start" href="?sound_id=63645&step=22">ロックマン4：ボス（Dr.ワイリー戦）</a></p>
-			<?php } if(@$_GET['sound_id'] !== '63646') { ?><p><a class="litro_start" href="?sound_id=63646&step=40">DragonSlayer4：タイトル画面</a></p>
-			<?php } if(!empty($paramstr)){ ?><p><a href="litrokeyboard">元のエディタに戻る</a></p><?php } ?>
+			<p class="small" style="margin:8px; font-size:14px; text-align:left;"><span style="text-decoration:line-through; ">デモ用に曲を打ち込んでみました。</span>【準備中】</p>
 			<p style="margin:48px auto 0 auto;">▼画像クリックで<span class="font_litroGreen">LitroKeyboard</span>起動▼</p>
 		</div>
 		<div class="blackBox" style="width:640px; height:480px;">
@@ -88,12 +85,19 @@ $(function(){
 <span class="font_red bold">【詳細はアプリ内のMANUALを参照ください。】</span>
 </p>			
 		<div class="sublink plastic_blue" style="margin: 16px auto; padding:8px; 16px;">
-			<p class="small" style="margin:8px; font-size:14px; text-align:left;">参考資料</p>
+			<h3 class="bold small" style="margin:8px; font-size:14px; text-align:left;">参考資料</p>
 			<ul>
 				<li class="text_right"><a href="http://www.g200kg.com/">g200kg&nbsp;Music&amp;Software</a></li>
 				<li class="text_right" ><a href="http://curtaincall.weblike.jp/portfolio-web-sounder/">WEB&nbsp;SOUNDER</a></li>
 				<li class="text_right" ><a href="http://www.html5.jp/">HTML5.JP</a></li>
 				<li class="text_right" ><a href="http://www.h2.dion.ne.jp/~defghi/canvasMemo/canvasMemo.htm">canvas要素の基本的な使い方まとめ</a></li>
+			</ul>
+		</div>
+		<div class="sublink plastic_milkyWhite" style="margin: 16px auto; padding:8px; 16px;">
+			<h3 class="bold small" style="margin:8px; font-size:14px; text-align:left;">ソースコード</p>
+			<ul>
+				<li class="text_right"><a href="https://github.com/oshiimizunohuta/litrosound">github</a></li>
+				<li class="text_right"><a href="http://jsdo.it/shifta_low/nB2a">jsdo.it</a></li>
 			</ul>
 		</div>
 	</div>

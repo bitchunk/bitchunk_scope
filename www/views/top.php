@@ -14,4 +14,7 @@
 	<p>
 		<span class="sublink"><a href="/tothkua_sound">ゲームに使っている曲</a></span>
 	</p>
+	<p>
+		<span class="sublink"><a href="/thumbtri">さむとり</a></span>
+	</p>
 </div>
