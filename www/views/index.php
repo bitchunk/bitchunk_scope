@@ -17,6 +17,7 @@
 				<br>
 				閲覧の際は、Javascriptを有効にしてください。
 			</p>
+			
 			<p>
 				推奨ブラウザ：Google Chrome, Safari, Firefox
 			</p>
