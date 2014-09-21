@@ -1,9 +1,3 @@
-[submodule "litrosound"]
-	path = litrosound
-	url = git@github.com:oshiimizunohuta/litrosound.git
-[submodule "www/app/litrosound"]
-	path = www/app/litrosound
-	url = git@github.com:oshiimizunohuta/litrosound.git
 [submodule "www/app/thumbtri"]
 	path = www/app/thumbtri
 	url = git@github.com:oshiimizunohuta/thumbtri.git

@@ -56,17 +56,26 @@ $(function(){
 			</ul>
 			<hr class="clear" />
 			<br />
+			<table style="margin:0 auto; width:90%;">
+				<thead>
+					<tr style="background:hsl(220, 80%, 10%);"><th>ブラウザ</th><th>mac</th><th>win</th></tr>
+				</thead>
+<?php foreach($supports as $s){ ?>
+				<tr style="background:hsl(240, 80%, 30%);">
+					<td><?php echo $s['name']; ?></td><td><?php echo $s['mac']; ?></td><td><?php echo $s['win']; ?></td>
+				</tr>
+<?php } ?>
+			</table>
 			<ul class="" style="text-align: left; width:90%; padding:8px; margin:0 auto; ">
-				<li class="font_red ok">ブラウザは<span class="bold">Chrome</span>か<span class="bold">Opera</span>で動作確認できています。(win版)</span>
-				<li class="nogood" style="font-size:14px;">FireFox・Sleipnir・SeaMonkeyでは十分なパフォーマンスが出せません。<br/>止まっちゃうかもしれないです。</li>
-				<li class="sorry" style="font-size:12px;">Safari・IE9では動作しません。</span><br/>
-				<li style="font-size:14px;">（確認日時：2014/07/06）</li><br/>
+				<li class="font_red ok">（確認日時：2014/07/06）</li><br/>
 				<li class="font_red ok">その他の環境で動作の可否など通知していただけると助かります。<br/>通知はページ下のSNSボタンでお願いします。</li>
 			</ul>
 		</div>
 		<!-- <p>(キーの反応がなくなったら<span class="focus" style="font-weight:bold; vertical-align:top; cursor:pointer; background: hsl(10, 50%, 20%);">ここ</span>クリックしてみてください)</p> -->
 		<div class="sublink plastic_blue" style="margin-top: 16px; padding:8px; 16px;">
-			<p class="small" style="margin:8px; font-size:14px; text-align:left;"><span style="text-decoration:line-through; ">デモ用に曲を打ち込んでみました。</span>【準備中】</p>
+			<p class="small" style="margin:8px; font-size:14px; text-align:left;"><span style="">デモ用に曲を打ち込んでみました。</span>（リンク先で起動して再生できます）</p>
+			<p><a href="?sound_id=63647&step=22&buff=2048">デモ１起動</a></p>
+			<p><a href="./litrokeyboard">通常起動にもどる</a></p>
 			<p style="margin:48px auto 0 auto;">▼画像クリックで<span class="font_litroGreen">LitroKeyboard</span>起動▼</p>
 		</div>
 		<div class="blackBox" style="width:640px; height:480px;">
@@ -74,15 +83,14 @@ $(function(){
 			<!-- <iframe src="/app/litrosound<?php echo !empty($paramstr) ? '?'. $paramstr : ''; ?>" scrolling="no" width="640" height="480"></iframe> -->
 		</div>
 		<p style="text-align:center;">操作</p>
-<p style="white-space: pre-wrap; line-height: 32px;"> オクターブ変更： ^ (JISキーボード) or  + (USKeyboard)・ - 
+<p style="white-space: pre-wrap; line-height: 32px;"><!-- オクターブ変更： ^ (JISキーボード) or  + (USKeyboard)・ - 
 決定/Next： > 
 キャンセル/Back： < 
 モード切り替え/Change Mode： TAB 
 再生・停止/start Stop： SPACE 
 カーソル移動/Move Cursor： ↑ ・ → ・ ↓ ・ ← 
  + Shift key  More Controll
- 
-<span class="font_red bold">【詳細はアプリ内のMANUALを参照ください。】</span>
+  --><span class="font_red bold">【詳細はアプリ内のMANUALを参照ください。(不完全)】</span>
 </p>			
 		<div class="sublink plastic_blue" style="margin: 16px auto; padding:8px; 16px;">
 			<h3 class="bold small" style="margin:8px; font-size:14px; text-align:left;">参考資料</p>

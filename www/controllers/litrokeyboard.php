@@ -2,8 +2,28 @@
 	self::$cardsmeta = 'litrokeyboard';
 	self::$headerBase = 'litrokeyboard';
 	self::appendBreadCrumb('LitroKeyboard', '/litrokeyboard');
-	
 	$paramstr = @http_build_query($_GET, '', '&');
+	$supports = supportbrowsers();
+	function supportbrowsers()
+	{
+		$supports = array(array('Chrome', '◯', '36.0')
+				,array('Firefox', '？', '32.0')
+				,array('Internetexplorer', '－', '？')
+				,array('Safari', '？', '×')
+				,array('Opera', '？', '23.0')
+				,array('SeaMonkey', '？', '2.26.1')
+				,array('Sleipnir', '？', '6.0.0△')
+				);
+		$res = array();
+		foreach($supports as $s){
+			$res[] = setBdata($s[0], $s[1], $s[2]);
+		}
+		return $res;
+	}
+	function setBdata($name, $support_mac, $support_win)
+	{
+		return array('name' => $name, 'mac' => $support_mac, 'win' => $support_win);
+	}
 	
 	function setButton()
 	{
