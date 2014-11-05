@@ -27,6 +27,11 @@ h1{
 	font-size:12px;
 }
 
+#mailprompt{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 .donate{
 	float:right;
 }
@@ -39,11 +44,17 @@ h1{
 }
 
 .mainbox{
-	width:640px;
+/*/	width:640px;*/
+	width:94%;
 	background: hsla(220, 50%, 10%, 0.6);
-	padding: 16px;
-	border-radius:16px;
-	border: 8px dotted hsla(220, 60%, 90%, 0.8);
+	padding: 2%;
+	border-radius:4%;
+	border: 8pt dotted hsla(220, 60%, 90%, 0.8);
+	box-sizing:border-box;
+	
+/*	padding: 16px;*/
+/*	border-radius:16px;*/
+/*	border: 8px dotted hsla(220, 60%, 90%, 0.8);*/
 	margin:30px auto;
 	text-align: center;
 	
@@ -53,6 +64,21 @@ h1{
 	margin: 8px auto;
 
 }
+
+.resp_nl{
+	display:none;
+}
+@media screen and (max-device-width:640px){
+	.resp_nl{
+		display:block;
+	}
+}
+@media screen and (max-width:640px){
+	.resp_nl{
+		display:block;
+	}
+}
+
 
 footer{
 }

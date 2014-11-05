@@ -1,7 +1,12 @@
 <script type="application/javascript" language="Javascript">
 $(function(){
-	var offset, win;
+	var offset, win, timter = 0;
 	$('.litro_start').click(function(){
+		openLitroKeyboard($(this).attr('href') != null ? $(this).attr('href') : "" );
+		return false;
+	});
+	
+	$('.bootapp').click(function(){
 		openLitroKeyboard($(this).attr('href') != null ? $(this).attr('href') : "" );
 		return false;
 	});
@@ -10,24 +15,50 @@ $(function(){
 	{
 		var getstr = '<?php echo !empty($paramstr) ? '?'. $paramstr : ''; ?>';
 		offset = $('.blackBox').offset();
-		// setTimeout(function(){window.open('/app/litrosound<?php echo !empty($paramstr) ? '?'. $paramstr : ''; ?>', '')});
-		win = window.open('/app/litrosound' + (getstr != '' ? getstr : href), 'litroWindow', 'width=672,height=512,menubar=no,toolbar=yes,scrollbars=no');
+				
+		href = '/app/litrokeyboard' + (getstr != '' ? getstr : href);
+		
+		if(win != null && !win.closed){
+			win.location.href = href;
+			return;
+		}
+		
+		win = window.open(href, 'litroWindow', 'width=672,height=512,menubar=no,toolbar=yes,scrollbars=no');
 		$('.litro_screen').css({position:'absolute', left: offset.left, top: offset.top})
 			.stop().animate({top: '-' + $('.litro_screen').css('height')}, 1280, 'easeInOutElastic')
 			;
+			
 		win.document.addEventListener('load', 
 			function(){
 				win.document.body.style = 'overflow:hidden';
 			}, false);
-			
+		
 		$(window).focus(function(){
+			if(!win.closed){
+				return;
+			}
 			if($('.litro_screen').css('position') != 'absolute'){
 				return;
 			}
 			$('.litro_screen').stop().animate({top: offset.top}, 2020, 'swing', function(){
 					$(this).css({position:'static', left: 'auto', top: 'auto'});
 			});
+			clearInterval(timer);
+			
 		});
+		
+		timer = setInterval(function(){
+			if(!win.closed){
+				return;
+			}
+			if($('.litro_screen').css('position') != 'absolute'){
+				return;
+			}
+			$('.litro_screen').stop().animate({top: offset.top}, 2020, 'swing', function(){
+					$(this).css({position:'static', left: 'auto', top: 'auto'});
+			});
+			clearInterval(timer);
+		}, 1000);
 	}
 	
 });
@@ -74,9 +105,10 @@ $(function(){
 		<!-- <p>(キーの反応がなくなったら<span class="focus" style="font-weight:bold; vertical-align:top; cursor:pointer; background: hsl(10, 50%, 20%);">ここ</span>クリックしてみてください)</p> -->
 		<div class="sublink plastic_blue" style="margin-top: 16px; padding:8px; 16px;">
 			<p class="small" style="margin:8px; font-size:14px; text-align:left;"><span style="">デモ用に曲を打ち込んでみました。</span>（リンク先で起動して再生できます）</p>
-			<p><a href="?sound_id=63647&step=22&buff=2048">デモ１起動</a></p>
-			<p><a href="./litrokeyboard">通常起動にもどる</a></p>
-			<p style="margin:48px auto 0 auto;">▼画像クリックで<span class="font_litroGreen">LitroKeyboard</span>起動▼</p>
+			<p><a class="bootapp" href="?sound_id=63647&step=22&buff=2048">デモ１起動</a></p>
+			<p><a class="bootapp" href="?sound_id=63648&step=22&buff=2048">デモ２「TOTHKUA：チカトシ」</a></p>
+			<!-- <p><a href="./litrokeyboard">通常起動にもどる</a></p> -->
+			<p style="margin:48px auto 0 auto;">▼画像クリックでDTM<span class="font_litroGreen">「LitroKeyboard」</span>アプリを起動▼</p>
 		</div>
 		<div class="blackBox" style="width:640px; height:480px;">
 			<img class="litro_screen litro_start" style="cursor:pointer;" src="/images/common/litro_stay.png" width="640" height="480" />

@@ -5,6 +5,8 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<meta name="viewport" content="width=320, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
 <?php
 	require_once(VIEW_PATH . 'headerbase/'. DispatchController::$headerBase. '.php');
 ?>
@@ -27,6 +29,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script src="/js/lib/jquery-2.0.0.min.js"></script>
 <script src="/js/lib/jquery.easing.1.3.js"></script>
+<script src="/js/lib/common.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
